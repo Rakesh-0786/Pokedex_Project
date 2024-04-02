@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -10,3 +11,6 @@ Currently, two official plugins are available:
 =======
 # Pokedex_Project
 >>>>>>> origin/main
+=======
+# Pokedex_Project
+>>>>>>> d0ee1b00d77c6effef3f7a2365f655e86a382eb7
