@@ -1,14 +1,17 @@
-import './Pokemon.css'; // Import CSS file for styling
+import { Link } from "react-router-dom";
+import './Pokemon.css'; 
 
-function Pokemon({ name, image }) {
+function Pokemon({ name, image,id }) {
     return (
-        <div className='pokemon'> {/* Add className to the outer div */}
-            <div className='pokemon-name'>{name}</div> {/* Render Pokémon's name */}
+        <div className='pokemon'>
+        <Link to={`/pokemon/${id}`}>
+            <div className='pokemon-name'>{name}</div> 
             <div>
-                <img className='pokemon-image' src={image} alt={name} /> {/* Render Pokémon's image */}
+                <img className='pokemon-image' src={image} alt={name} /> 
             </div>
+            </Link>
         </div>
     );
 }
 
-export default Pokemon; // Export the component
+export default Pokemon;
