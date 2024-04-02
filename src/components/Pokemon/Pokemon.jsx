@@ -1,10 +1,14 @@
+import './Pokemon.css'; // Import CSS file for styling
+
 function Pokemon({ name, image }) {
     return (
-        <div>
-            <div>{name}</div>
-            <div><img src={image} /></div>
+        <div className='pokemon'> {/* Add className to the outer div */}
+            <div className='pokemon-name'>{name}</div> {/* Render Pokémon's name */}
+            <div>
+                <img className='pokemon-image' src={image} alt={name} /> {/* Render Pokémon's image */}
+            </div>
         </div>
-    )
+    );
 }
 
-export default Pokemon;
+export default Pokemon; // Export the component
