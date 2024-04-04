@@ -214,4 +214,69 @@ function PokemonDetails() {
         In this example, useParams gives you access to the id parameter from the URL, which you can then use in your component to fetch and display details about the Pokémon with that ID.
 
         useParams is a React hook provided by React Router that allows you to access parameters from the current URL in your React components. It's particularly useful for extracting dynamic segments from the URL, such as IDs or usernames, and using them in your components to fetch data or customize the UI based on the current route.
+
+        
+
+
+
+
+
+
+        // manage multiple states :
+        In React, if you need to manage multiple states within a component, you can achieve this by using multiple useState hooks or by using a single state object with the useState hook to manage multiple state variables. Here's how you can do it:
+
+Using Multiple useState Hooks:
+jsx
+Copy code
+import React, { useState } from 'react';
+
+function MyComponent() {
+  const [state1, setState1] = useState(initialState1);
+  const [state2, setState2] = useState(initialState2);
+  // Add more state variables as needed
+
+  // Functions to update states
+  const updateState1 = () => {
+    setState1( new value );
+  };
+
+  const updateState2 = () => {
+    setState2( new value );
+  };
+
+  return (
+    <div>
+       Your component JSX 
+    </div>
+  );
+}
+Using a Single State Object:
+jsx
+Copy code
+import React, { useState } from 'react';
+
+function MyComponent() {
+  const [state, setState] = useState({
+    state1: initialState1,
+    state2: initialState2,
+    // Add more state variables as needed
+  });
+
+  // Function to update states
+  const updateState = (key, value) => {
+    setState(prevState => ({
+      ...prevState,
+      [key]: value,
+    }));
+  };
+
+  return (
+    <div>
+     Your component JSX 
+    </div>
+  );
+}
+In this approach, useState is used to initialize a state object containing all the necessary state variables. The updateState function is then used to update any of these state variables by providing the key and the new value.
+
+Both approaches work effectively in managing multiple states within a React component. The choice between them depends on your specific use case and preferences.
  */
