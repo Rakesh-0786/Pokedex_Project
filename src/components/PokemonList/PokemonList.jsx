@@ -1,16 +1,25 @@
-import { useEffect, useState } from "react";
-import axios from 'axios';
+
+// import { useEffect, useState } from "react";
+// import axios from 'axios';
 import './PokemonList.css';
 import Pokemon from "../Pokemon/Pokemon";
+import usePokemonList from "../../hooks/usePokemonList";
 
 function PokemonList() {
-    // const [pokemonList, setPokemonList] = useState([]);
-    // const [isLoading, setIsLoading] = useState(true);
-    // const [pokedexUrl, setPokedexUrl] = useState('https://pokeapi.co/api/v2/pokemon');
-    // const [nextUrl, setNextUrl] = useState('');
-    // const [prevUrl, setPrevUrl] = useState('');
 
-    // combine multiple states
+    // const {pokemonListState , setPokemonListState}=usePokemonList();
+    const [pokemonListState , setPokemonListState]=usePokemonList( false);
+
+
+   /*
+   manage with the custom hooks
+    const [pokemonList, setPokemonList] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [pokedexUrl, setPokedexUrl] = useState('https://pokeapi.co/api/v2/pokemon');
+    const [nextUrl, setNextUrl] = useState('');
+    const [prevUrl, setPrevUrl] = useState('');
+
+    combine multiple states
     const [pokemonListState, setPokemonListState]=useState({
         pokemonList:[],
         isLoading:true,
@@ -70,7 +79,8 @@ function PokemonList() {
 
     useEffect(() => {
         downloadPokemons();
-    }, [pokemonListState.pokedexUrl]);
+    }, [pokemonListState.pokedexUrl]); 
+    */
 
     return (
         <div className="pokemon-list-wrapper">
@@ -92,3 +102,5 @@ function PokemonList() {
 }
 
 export default PokemonList;
+
+
